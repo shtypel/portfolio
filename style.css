@@ -98,6 +98,12 @@ h1, h2, h3 {
   gap: 20px;
 }
 
+@media (min-width: 768px) {
+  .publication-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .publication-card h3 {
   margin-bottom: 10px;
 }
