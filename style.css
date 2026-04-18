@@ -377,3 +377,20 @@ h1, h2, h3 {
 .github-icon i {
   color: #ffffff;
 }
+
+/* FORCE WHITE LINKS FOR PROJECT BUTTONS */
+.project-links a,
+.project-links a:visited,
+.project-links a:active {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* Ensure icon stays white */
+.project-links a i {
+  color: #ffffff !important;
+}
+
+.project-links a:hover {
+  color: #ffffff !important;
+}
