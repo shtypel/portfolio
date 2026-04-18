@@ -244,7 +244,7 @@ h1, h2, h3 {
 
 .project-card {
   flex: 0 0 calc((100% - 40px) / 3);
-  min-width: 300px;
+  min-width: 260px;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
