@@ -394,3 +394,7 @@ h1, h2, h3 {
 .project-links a:hover {
   color: #ffffff !important;
 }
+
+.project-card h3 {
+  margin-top: 10px;
+}
