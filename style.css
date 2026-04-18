@@ -398,3 +398,41 @@ h1, h2, h3 {
 .project-card h3 {
   margin-top: 10px;
 }
+
+.projects-wrapper {
+  position: relative;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: 1px solid #374151;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.scroll-btn.left {
+  left: -20px;
+}
+
+.scroll-btn.right {
+  right: -20px;
+}
+
+.scroll-btn:hover {
+  background: #1f2937;
+  border-color: #4b5563;
+}
