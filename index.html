@@ -333,17 +333,19 @@
 
   </div>
     <script>
-    const scrollContainer = document.querySelector('.projects-scroll');
-    const leftBtn = document.querySelector('.scroll-btn.left');
-    const rightBtn = document.querySelector('.scroll-btn.right');
-
-    rightBtn.addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: 400, behavior: 'smooth' });
-    });
-
-    leftBtn.addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: -400, behavior: 'smooth' });
-    });
+      const scrollContainer = document.querySelector('.projects-scroll');
+      const leftBtn = document.querySelector('.scroll-btn.left');
+      const rightBtn = document.querySelector('.scroll-btn.right');
+    
+      const scrollAmount = scrollContainer.clientWidth / 2;
+    
+      rightBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    
+      leftBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
   </script>
 </body>
 </html>
