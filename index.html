@@ -332,5 +332,18 @@
 </section>
 
   </div>
+    <script>
+    const scrollContainer = document.querySelector('.projects-scroll');
+    const leftBtn = document.querySelector('.scroll-btn.left');
+    const rightBtn = document.querySelector('.scroll-btn.right');
+
+    rightBtn.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: 400, behavior: 'smooth' });
+    });
+
+    leftBtn.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
