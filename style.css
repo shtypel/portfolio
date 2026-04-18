@@ -151,3 +151,78 @@ h1, h2, h3 {
 .btn-link:hover {
   border-color: #60a5fa;
 }
+
+.education-main {
+  margin-bottom: 20px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.subject-flip-card {
+  background: transparent;
+  perspective: 1000px;
+  min-height: 260px;
+}
+
+.subject-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.subject-flip-card:hover .subject-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.subject-flip-front,
+.subject-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.subject-flip-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subject-flip-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.subject-flip-front h3,
+.subject-flip-back h3 {
+  margin-bottom: 12px;
+}
+
+.subject-flip-front p,
+.subject-flip-back p {
+  margin-bottom: 10px;
+}
+
+.subject-flip-back ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.subject-flip-back li {
+  margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+  .education-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
