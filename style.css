@@ -122,20 +122,14 @@ h2 {
   background: var(--bg-card-hover);
 }
 
-.subject-flip-card.card:hover {
-  transform: none !important;
-  box-shadow: var(--shadow);
-  border-color: var(--border);
-  background: transparent;
-}
-
-/* Prevent hover-lift conflict on flip card faces */
+/* Disable generic card hover behavior for flip cards */
+.subject-flip-card.card:hover,
 .subject-flip-front.card:hover,
 .subject-flip-back.card:hover {
-  transform: none;
-  box-shadow: var(--shadow);
-  border-color: var(--border);
-  background: var(--bg-card);
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  background: transparent !important;
 }
 
 /* Generic tags */
@@ -262,12 +256,15 @@ h2 {
 
 .subject-flip-card {
   position: relative;
-  perspective: 1200px;
+  width: 100%;
   height: 280px;
+  perspective: 1200px;
   background: transparent;
   border: none;
   box-shadow: none;
   margin-bottom: 0;
+  padding: 0;
+  overflow: visible;
 }
 
 .subject-flip-inner {
@@ -275,7 +272,10 @@ h2 {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: transform 0.7s ease;
+  will-change: transform;
+  pointer-events: none;
 }
 
 .subject-flip-card:hover .subject-flip-inner {
@@ -286,9 +286,11 @@ h2 {
 .subject-flip-back {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform-style: preserve-3d;
+  pointer-events: none;
 
   background-color: var(--bg-card);
   border: 1px solid var(--border);
@@ -303,11 +305,12 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: rotateY(0deg);
 }
 
 .subject-flip-back {
   transform: rotateY(180deg);
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .subject-flip-front h3,
