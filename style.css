@@ -254,18 +254,17 @@ h2 {
 }
 
 .subject-flip-card {
+  position: relative;
   perspective: 1000px;
   height: 280px;
-  position: relative;
 }
 
 .subject-flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.7s ease;
   transform-style: preserve-3d;
-  will-change: transform;
+  transition: transform 0.7s ease;
 }
 
 .subject-flip-card:hover .subject-flip-inner {
@@ -278,7 +277,9 @@ h2 {
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  margin-bottom: 0;
+
+  /* key fix */
+  pointer-events: none;
 
   background-color: var(--bg-card);
   border: 1px solid var(--border);
@@ -286,6 +287,7 @@ h2 {
   padding: 24px;
   color: var(--text-main);
   box-shadow: var(--shadow);
+  margin-bottom: 0;
 }
 
 .subject-flip-front {
