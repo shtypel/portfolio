@@ -4,10 +4,33 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
   background-color: #d6efff;
   color: #332202;
   line-height: 1.6;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.project-description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tag {
+  font-weight: 500;
+  font-size: 13px;
 }
 
 .container {
