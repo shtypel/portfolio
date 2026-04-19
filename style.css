@@ -122,6 +122,13 @@ h2 {
   background: var(--bg-card-hover);
 }
 
+.subject-flip-card.card:hover {
+  transform: none !important;
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+  background: transparent;
+}
+
 /* Prevent hover-lift conflict on flip card faces */
 .subject-flip-front.card:hover,
 .subject-flip-back.card:hover {
@@ -255,8 +262,12 @@ h2 {
 
 .subject-flip-card {
   position: relative;
-  perspective: 1000px;
+  perspective: 1200px;
   height: 280px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
 }
 
 .subject-flip-inner {
@@ -277,9 +288,7 @@ h2 {
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-
-  /* key fix */
-  pointer-events: none;
+  transform-style: preserve-3d;
 
   background-color: var(--bg-card);
   border: 1px solid var(--border);
