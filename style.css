@@ -32,8 +32,6 @@ body {
   line-height: 1.6;
   background-color: var(--bg-main);
   color: var(--text-main);
-
-  /* dotted background */
   background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 22px 22px;
 }
@@ -122,6 +120,15 @@ h2 {
   box-shadow: var(--shadow-hover);
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
+}
+
+/* Prevent hover-lift conflict on flip card faces */
+.subject-flip-front.card:hover,
+.subject-flip-back.card:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+  background: var(--bg-card);
 }
 
 /* Generic tags */
@@ -249,14 +256,16 @@ h2 {
 .subject-flip-card {
   perspective: 1000px;
   height: 280px;
+  position: relative;
 }
 
 .subject-flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.7s;
+  transition: transform 0.7s ease;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .subject-flip-card:hover .subject-flip-inner {
@@ -270,6 +279,13 @@ h2 {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   margin-bottom: 0;
+
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  color: var(--text-main);
+  box-shadow: var(--shadow);
 }
 
 .subject-flip-front {
@@ -390,6 +406,8 @@ h2 {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  position: relative;
+  height: 40px;
 }
 
 .project-note {
@@ -409,12 +427,6 @@ h2 {
     flex: 0 0 100%;
     min-width: 260px;
   }
-}
-
-.project-links {
-  position: relative;
-  margin-top: auto;
-  height: 40px;
 }
 
 /* GitHub icon (LEFT) */
