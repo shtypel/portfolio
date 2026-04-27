@@ -90,7 +90,14 @@
           <h3>Выявление атак на аккаунты (Account Takeover) в транзакционных данных (SQL-анализ)</h3>
     
           <p class="project-description">
-            Анализ транзакционных данных для выявления атак на аккаунты (Account Takeover) через поведенческие аномалии пользователей. Реализованы SQL-запросы для обнаружения подозрительных паттернов: высокая частота операций, резкие изменения сумм и нетипичная активность.
+            SQL-проект по выявлению признаков Account Takeover Fraud в транзакционных данных. 
+            Анализ построен вокруг поведенческих сценариев риска: резкого роста активности, 
+            нетипичных сумм транзакций, возврата к активности после периода неактивности 
+            и повышенного количества попыток входа перед операцией.
+        
+            В проекте использованы CTE, оконные функции, агрегирование пользовательских 
+            baseline-показателей и risk scoring для объединения отдельных red flags 
+            в итоговую оценку подозрительности.
           </p>
     
           <div class="project-tags">
@@ -99,10 +106,19 @@
             <span>Оконные функции</span>
             <span>CTE/Joins</span>
             <span>Детекция аномалий</span>
+            <span>Risk Scoring</span>
           </div>
     
           <div class="project-links">
-            <span class="project-note">Скоро</span>
+
+            <a href="https://github.com/shtypel/fraud-data-analytics" target="_blank" class="github-icon">
+              <i class="devicon-github-original"></i>
+            </a>
+            
+            <a href="fraud-data-analytics.pdf" target="_blank" class="pdf-link">
+              PDF
+            </a>
+            
           </div>
         </div>
     
