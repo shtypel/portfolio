@@ -15,6 +15,7 @@ https://shtypel.github.io/portfolio/
 SQL, MySQL, Python, pandas, scikit-learn, R, Jupyter Notebook 
 
 ## Структура репозитория
+```
 portfolio/
 ├── index.html
 ├── style.css
@@ -22,6 +23,7 @@ portfolio/
 │ ├── images/
 │ └── pdfs/
 └── README.md
+```
 
 
 ## Контакты
