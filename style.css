@@ -245,10 +245,11 @@ h2 {
 
 /* Education */
 .education-main {
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .education-grid {
+  margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
