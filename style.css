@@ -248,6 +248,17 @@ h2 {
   margin-bottom: 32px;
 }
 
+.education-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.education-meta p {
+  margin: 0;
+}
+
 .education-grid {
   margin-top: 16px;
   display: grid;
