@@ -46,120 +46,106 @@
         <span><i class="devicon-jupyter-plain"></i> Jupyter</span>
       </div>
     </section>
-
+    
     <section class="projects">
-      <h2><i class="fas fa-chart-line"></i> Проекты</h2>
-
+      <h2><i class="fas fa-chart-line"></i> Избранные проекты</h2>
+    
       <div class="projects-wrapper">
-
-      <button class="scroll-btn left">&#8249;</button>
-      <div class="projects-scroll">
     
-        <!-- Project 1 -->
-        <div class="project-card card">
+        <button class="scroll-btn left">&#8249;</button>
     
-          <h3>Анализ восприятия коррупции и безопасности в Гонконге</h3>
+        <div class="projects-scroll">
     
-          <p class="project-description">
-            Анализ взаимосвязи между восприятием безопасности и коррупции на основе данных World Values Survey (Гонконг, ~2000 наблюдений).
+          <!-- Project 1 -->
+          <div class="project-card card">
     
-            Проведено построение и сравнение моделей бинарной логистической и множественной линейной регрессии для оценки влияния субъективной коррупции и демографических факторов. Дополнительно выполнен анализ взаимодействий (moderation analysis).
+            <h3>Выявление мошеннических Ethereum-кошельков</h3>
     
-          </p>
+            <p class="project-description">
+              Разработка end-to-end ETL и ML pipeline для выявления мошеннических Ethereum-кошельков, включая feature engineering, сравнение моделей и wallet-level risk scoring.
+            </p>
     
-          <div class="project-tags">
-            <span>R</span>
-            <span>Logistic Regression</span>
-            <span>Linear Regression</span>
-            <span>Statistical Inference</span>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Random Forest</span>
+              <span>Gradient Boosting</span>
+              <span>ETL Pipeline</span>
+              <span>Fraud Detection</span>
+              <span>Risk Scoring</span>
+            </div>
+    
+            <div class="project-links">
+    
+              <a href="https://github.com/shtypel/ethereum-fraud" target="_blank" class="github-icon">
+                <i class="devicon-github-original"></i>
+              </a>
+    
+            </div>
           </div>
     
-          <div class="project-links">
-
-            <a href="https://github.com/shtypel/hk-corruption-security-analysis" target="_blank" class="github-icon">
-              <i class="devicon-github-original"></i>
-            </a>
-          
-            <a href="assets/pdfs/corruption-security-analysis_regression.pdf" target="_blank" class="pdf-link">
-              PDF
-            </a>
-          
+          <!-- Project 2 -->
+          <div class="project-card card">
+    
+            <h3>Fraud Data Analytics</h3>
+    
+            <p class="project-description">
+              Разработка SQL-based аналитических тестов для выявления account takeover и эксплуатации dormant accounts в банковских транзакциях.
+            </p>
+    
+            <div class="project-tags">
+              <span>SQL</span>
+              <span>MySQL</span>
+              <span>Fraud Analytics</span>
+              <span>Behavioural Analysis</span>
+            </div>
+    
+            <div class="project-links">
+    
+              <a href="https://github.com/shtypel/fraud-data-analytics" target="_blank" class="github-icon">
+                <i class="devicon-github-original"></i>
+              </a>
+    
+              <a href="assets/pdfs/fraud-data-analytics.pdf" target="_blank" class="pdf-link">
+                PDF
+              </a>
+    
+            </div>
           </div>
+    
+          <!-- Project 3 -->
+          <div class="project-card card">
+    
+            <h3>Анализ коррупции и безопасности</h3>
+    
+            <p class="project-description">
+              Применение regression analysis для исследования взаимосвязи между восприятием коррупции, ощущением безопасности и демографическими факторами.
+            </p>
+    
+            <div class="project-tags">
+              <span>R</span>
+              <span>Regression Analysis</span>
+              <span>Statistical Modelling</span>
+              <span>Data Analysis</span>
+            </div>
+    
+            <div class="project-links">
+    
+              <a href="https://github.com/shtypel/hk-corruption-security-analysis" target="_blank" class="github-icon">
+                <i class="devicon-github-original"></i>
+              </a>
+    
+              <a href="assets/pdfs/corruption-security-analysis_regression.pdf" target="_blank" class="pdf-link">
+                PDF
+              </a>
+    
+            </div>
+          </div>
+    
         </div>
     
-        <!-- Project 2 (placeholder) -->
-        <div class="project-card card">
-    
-          <h3>Детекция Account Takeover в транзакционных данных</h3>
-    
-          <p class="project-description">
-            SQL-анализ транзакций для выявления признаков компрометации аккаунтов. 
-            Обнаружение аномалий в поведении пользователей: рост частоты операций, 
-            нетипичные суммы, активность после периода неактивности и повышенные попытки входа.
-          </p>
-    
-          <div class="project-tags">
-            <span>SQL</span>
-            <span>Анализ транзакций</span>
-            <span>Оконные функции</span>
-            <span>CTE/Joins</span>
-            <span>Risk Scoring</span>
-          </div>
-    
-          <div class="project-links">
-
-            <a href="https://github.com/shtypel/fraud-data-analytics" target="_blank" class="github-icon">
-              <i class="devicon-github-original"></i>
-            </a>
-            
-            <a href="assets/pdfs/fraud-data-analytics.pdf" target="_blank" class="pdf-link">
-              PDF
-            </a>
-            
-          </div>
-        </div>
-    
-        <!-- Project 3 (placeholder) -->
-        <div class="project-card card">
-          <h3>Разработка антифрод-пайплайна для выявления подозрительной активности</h3>
-    
-          <p class="project-description">
-            Разработка end-to-end антифрод-пайплайна: загрузка и предобработка данных, построение признаков, выявление поведенческих аномалий и генерация алертов. Проект ориентирован на моделирование реальных систем мониторинга мошенничества.
-          </p>
-    
-          <div class="project-tags">
-            <span>Python</span>
-            <span>Pandas</span>
-            <span>ETL-пайплайны</span>
-            <span>Feature Engineering</span>
-          </div>
-    
-          <div class="project-links">
-            <span class="project-note">Скоро</span>
-          </div>
-        </div>
-
-        <!-- Project 4 (placeholder) -->
-        <div class="project-card card">
-    
-          <h3>OSINT анализ фиктивных компаний и схем обналичивания (Shell Company Fraud)</h3>
-    
-          <p class="project-description">
-            Анализ схем мошенничества с использованием фиктивных компаний (shell companies) на основе открытых источников (OSINT): исследование структуры схем, ролей участников и методов сокрытия финансовых потоков. Проект направлен на выявление закономерностей и формирование подходов к обнаружению и предотвращению подобных схем.
-          </p>
-    
-          <div class="project-tags">
-            <span>OSINT</span>
-            <span>Анализ мошеннических схем</span>
-            <span>Shell companies</span>
-          </div>
-    
-          <div class="project-links">
-            <span class="project-note">Скоро</span>
-          </div>
-        </div>
-        
         <button class="scroll-btn right">&#8250;</button>
+    
       </div>
     </section>
     <section class="publications">
